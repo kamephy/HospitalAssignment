@@ -2,6 +2,7 @@ package data;
 import java.util.Date;
 
 public class Patient {
+    
 	String name,location;
     Date date1;
     

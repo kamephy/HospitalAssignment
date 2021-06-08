@@ -1,17 +1,19 @@
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.time.LocalDate;
+
 
 import data.Patient;
 
 public class DecisionForHosital {
 
 	public static void main(String[] args) throws ParseException {
-		// TODO Auto-generated method stub
+
+//TODO Auto-generated method stub
 		
 		int bcount=0,ocount=0;
 		String sDate1="13/06/2021";  
@@ -22,6 +24,8 @@ public class DecisionForHosital {
 	    
 		List<Patient> allPatient = new ArrayList<>();
 
+
+//Data
 	    Patient p=new Patient();
 	    p.setName("Rahul");
 	    p.setlocation("Bangalore");
@@ -47,7 +51,10 @@ public class DecisionForHosital {
 	    p5.setlocation("kundapur");
 	    p5.setdate1(new SimpleDateFormat("dd/MM/yyyy").parse("18/06/2021"));
 	    allPatient.add(p5);
-	    
+	  
+
+
+//logic	
 	    int sizeAll=allPatient.size();
 	    for(int i=0;i<allPatient.size();i++){
 	    	if(allPatient.get(i).getlocation()=="Bangalore"){
@@ -61,15 +68,18 @@ public class DecisionForHosital {
 		    	ocount++;
 	    	}
 	    }
-	    
-	    System.out.println("bangalour"+bcount);
-	    System.out.println("out"+ocount);
+
+
+
+//Print
+	    System.out.println("Bangalore"+bcount);
+	    System.out.println("other cities"+ocount);
 	    
 	    
 	    Double inPatientPercentage = Double.valueOf(bcount * 100 / sizeAll);
         Double outPatientPercentage = Double.valueOf(ocount * 100 / sizeAll);
-	    System.out.println("bangalour"+inPatientPercentage);
-	    System.out.println("out"+outPatientPercentage);
+	    System.out.println("Bangalore"+inPatientPercentage);
+	    System.out.println("other cities"+outPatientPercentage);
 
 	}
 
